@@ -37,9 +37,13 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   my_new_project:
-    # Applies to all files under models/example/
-    example:
+    # This project builds models as views by default. 
+    # Settings can be overridden in individual .sql files.
+    staging:
+      +materialized: view
+    marts:
       +materialized: table
+
 vars:
   raw_database: "CUSTOMERS"
   raw_schema: "DEMO_PUBLIC"
