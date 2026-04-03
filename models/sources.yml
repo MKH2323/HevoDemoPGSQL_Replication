@@ -2,8 +2,9 @@ version: 2
 
 sources:
   - name: hevo_raw
-    database: CUSTOMERS      # Your landing database
-    schema: DEMO_PUBLIC      # <--- Updated from PUBLIC to DEMO_PUBLIC
+    # We use a variable here so it's not "hardcoded"
+    database: "{{ var('raw_database', 'CUSTOMERS') }}" 
+    schema: "{{ var('raw_schema', 'DEMO_PUBLIC') }}"
     tables:
       - name: raw_customers
       - name: raw_orders

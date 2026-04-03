@@ -40,3 +40,6 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: table
+vars:
+  raw_database: "CUSTOMERS"
+  raw_schema: "DEMO_PUBLIC"
