@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: "Final customer mart with order history and lifetime value."
+    columns:
+      - name: customer_id
+        description: "The unique ID for the customer."
+        tests:
+          - unique
+          - not_null
+      - name: number_of_orders
+        tests:
+          - not_null

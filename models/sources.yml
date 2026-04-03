@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: hevo_raw
+    database: CUSTOMERS      # Your landing database
+    schema: DEMO_PUBLIC      # <--- Updated from PUBLIC to DEMO_PUBLIC
+    tables:
+      - name: raw_customers
+      - name: raw_orders
+      - name: raw_payments
